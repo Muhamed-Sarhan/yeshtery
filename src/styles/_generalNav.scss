@@ -1,0 +1,52 @@
+.Gnav {
+  width: 100%;
+  height: 9vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+
+.partA {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  h2 {
+    margin-left: 15%;
+    font-size: 1.1vw;
+  }
+}
+.partB {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.1vw;
+}
+.partC {
+  width: 35%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+
+  div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    font-size: 1.1vw;
+
+    p {
+      margin-left: 7%;
+      font-size: 1.1vw;
+      width: 75%;
+    }
+  }
+}
+.shopNow {
+  text-decoration: underline !important;
+  color: blue !important;
+  margin-left: 5px;
+}

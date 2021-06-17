@@ -1,0 +1,68 @@
+.Bnav {
+  width: 85%;
+  margin: auto;
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: transparent !important;
+  color: #000000 !important;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+.partAb {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #d0d0d0;
+  border-radius: 25px;
+  padding: 0.6%;
+
+  h2 {
+    margin-left: 15%;
+    font-size: 1.1vw;
+  }
+  input {
+    border: none;
+  }
+  input:focus {
+    outline: none;
+  }
+}
+.partBb {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.1vw;
+}
+.partCb {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+
+  .rightCart {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    font-size: 1.1vw;
+
+    p {
+      margin-left: 7%;
+      font-size: 1.1vw;
+      width: 75%;
+    }
+  }
+}
+
+.brandImg {
+  width: 100px;
+}
+
+@media (max-width: 650px) {
+  .brandImg {
+    width: 60px;
+  }
+}

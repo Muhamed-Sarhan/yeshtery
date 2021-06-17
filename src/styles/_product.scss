@@ -1,0 +1,60 @@
+.cardStyle {
+  width: 25%;
+  padding: 0.5rem;
+  border: 1px solid #f4f4f4;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 5%;
+  background-color: #ffffff;
+  margin-right: 1%;
+}
+@media (max-width: 954px) {
+  .cardStyle {
+    width: 85%;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+}
+.imgCard {
+  width: 100%;
+}
+
+.saleBox {
+  padding: 2px 5px;
+  height: 100%;
+  font-size: 1vw;
+  background-color: var(--primary-color);
+  border-radius: 3px;
+  margin-left: 10px;
+}
+.oldPrice {
+  color: #aeb0b3;
+  text-decoration: line-through;
+}
+.displayCartItems {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.oldandsale {
+  display: flex;
+  flex-direction: row;
+}
+.imgBrand {
+  width: 50px;
+  height: 50px;
+}
+.currentPrice {
+  color: var(--secondary-color);
+}
+.mallName {
+  font-weight: bolder;
+}
+.mallBox {
+  text-align: center;
+}

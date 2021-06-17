@@ -1,0 +1,17 @@
+.categoryBar {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  min-height: 10vh !important;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.1vw;
+  h5 {
+    cursor: pointer;
+  }
+}
+
+.categoryBarItemOffers {
+  color: #f11133 !important;
+  font-weight: bolder;
+}
