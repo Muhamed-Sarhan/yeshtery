@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .breadcrumb {
   margin-left: 11% !important;
@@ -20,6 +20,28 @@
 .productListGrid {
   display: flex;
   flex-direction: row;
+  overflow-x: auto;
+  white-space: nowrap;
+  position: relative;
+}
+.next {
+  position: fixed;
+  left: 0;
+  top: 45%;
+  padding: 1em 2em;
+  border: 0;
+  border-radius: 25px;
+  background-color: coral;
+}
+
+.prev {
+  position: fixed;
+  right: 0;
+  top: 45%;
+  padding: 1em 2em;
+  border: 0;
+  border-radius: 25px;
+  background-color: coral;
 }
 @media (max-width: 954px) {
   .productListGrid {
@@ -31,7 +53,11 @@
     margin: auto;
   }
 }
-
+.ms14 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
 .productListHeader {
   margin-top: 2%;
   color: var(--secondary-color);

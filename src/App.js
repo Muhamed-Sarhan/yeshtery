@@ -8,6 +8,7 @@ import data from './services/data';
 import ProductList from './components/ProductList';
 import Footer from './components/footer';
 import loadCircle from './img/loading.gif';
+import ScrollIssu from './components/scrollIssu';
 
 const Home = lazy(() => {
   return new Promise((resolve) => {
@@ -18,12 +19,40 @@ const Home = lazy(() => {
 const { products } = data;
 
 class App extends Component {
-  state = {
-    selectedProductId: 1,
-    products,
-    totalCartProducts: 0,
+  constructor() {
+    super();
+    this.myRef = React.createRef(null);
+    this.ref = React.createRef(null);
+    this.state = {
+      selectedProductId: 1,
+      products,
+      gender: '',
+      totalCartProducts: 0,
+    };
+  }
+  /*================================================= */
+  scroll = (scrollOffset) => {
+    this.myRef.current.scrollLeft += scrollOffset;
+  };
+  /* ========================================================= */
+  filteringByGender = (e) => {
+    let gen = e.target.value;
+    if (gen === '') {
+      this.setState({
+        gender: gen,
+        products: products,
+      });
+    } else {
+      this.setState({
+        gender: gen,
+        products: products.filter((pp) => {
+          return pp.gender.indexOf(e.target.value) >= 0;
+        }),
+      });
+    }
   };
 
+  /* ========================================================= */
   handleIncrementCartProducts = (quantity) => {
     const { totalCartProducts } = this.state;
     this.setState({
@@ -64,9 +93,22 @@ class App extends Component {
               handleIncermentToCart={this.handleIncrementCartProducts}
             />
             <ProductList
+              myRef={this.myRef}
+              scroll={this.scroll}
               allProducts={products}
               id={selectedProductId}
               handleSelectedProduct={this.handleSelectedProduct}
+              filteringByGender={this.filteringByGender}
+              gender={this.state.gender}
+            />
+            <ScrollIssu
+              ref={this.ref}
+              scroll={this.scroll}
+              allProducts={products}
+              id={selectedProductId}
+              handleSelectedProduct={this.handleSelectedProduct}
+              filteringByGender={this.filteringByGender}
+              gender={this.state.gender}
             />
           </div>
           <Footer />

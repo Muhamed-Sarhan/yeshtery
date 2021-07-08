@@ -1,4 +1,5 @@
 .main-footer {
+  width: 100%;
   color: white;
   background-color: #3c3c3b;
   padding-top: 3em;
@@ -6,8 +7,24 @@
   bottom: 0;
   width: 100%;
 }
+
+.footer-Container {
+  width: 85%;
+  margin: auto;
+}
+.containerFooter {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
 .about {
   width: 40%;
+  padding-right: 1.5em;
+  p {
+    font-size: 1.1vw;
+    margin-top: 5%;
+  }
   h1 {
     color: var(--primary-color);
   }
@@ -16,7 +33,10 @@
   background-color: #fff;
   border-radius: 25px;
   padding: 5px;
-  width: 75%;
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
   input {
     width: 75%;
     padding: 10px;
@@ -29,39 +49,102 @@
   }
   button {
     width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--primary-color);
-    padding: 10px 0;
+    padding: 0.5em 1.5em;
     border: 0;
     border-radius: 25px;
-    font-size: 1vw;
+    font-size: 0.6em;
+    font-weight: 800;
   }
 }
-.containerFooter {
+.inputCaption {
   width: 80%;
   margin: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  padding: 0.5em;
 }
+
 .social {
-  width: 40%;
+  width: 60%;
+  margin-bottom: 1em;
+  border-left: 0.5px solid rgb(165, 164, 164);
 }
-.copyRights {
-  margin-top: 4em;
-  margin-bottom: 2em;
+.media {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
-.footermenu {
-  width: 75%;
+.ySocial {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  margin-right: 25%;
+  width: 60%;
+  p {
+    font-size: 0.75em;
+    font-weight: 600;
+  }
+}
+
+.sections {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-bottom: 1em;
+  border-right: 0.5px solid rgb(165, 164, 164);
+}
+
+.yLinks {
+  padding: 0.6em 0.5em;
+  color: #fff;
+  font-size: 0.75em;
+  font-weight: 600;
+  width: 70%;
+}
+
+.footermenu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   margin-top: 3%;
 }
+
+.copyRights {
+  width: 25%;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: center;
+}
+
 .payment {
-  margin-top: 4em;
+  width: 25%;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 .nasnav {
-  margin-top: 7em;
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.secondDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2em 0 2em 0;
+}
+hr.hrStyle {
+  border: 0;
+  height: 1px;
+  background: rgb(165, 164, 164);
+  width: 85%;
+  margin: auto;
 }

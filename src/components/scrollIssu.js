@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Product from './Product';
 import Skeleton from 'react-loading-skeleton';
 
-class ProductList extends Component {
+class ScrollIssu extends Component {
   state = {
     products: [],
     isLoading: true,
@@ -26,7 +26,7 @@ class ProductList extends Component {
     }, 3000);
   }
   render() {
-    const { handleSelectedProduct, filteringByGender, gender, myRef, scroll } =
+    const { handleSelectedProduct, filteringByGender, gender, ref, scroll } =
       this.props;
     const { products, isLoading } = this.state;
 
@@ -47,7 +47,7 @@ class ProductList extends Component {
             </select>
           </form>
         </div>
-        <div className='productListGrid' ref={myRef}>
+        <div className='productListGrid' ref={ref}>
           <div className='next-div'>
             <button onClick={() => scroll(100)} className='next'>
               Next
@@ -98,4 +98,4 @@ class ProductList extends Component {
     );
   }
 }
-export default ProductList;
+export default ScrollIssu;
